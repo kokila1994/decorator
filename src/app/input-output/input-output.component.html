@@ -1,0 +1,30 @@
+
+        <button (click)="newEvent()">Show</button>
+        <button (click)="newEvents()">Hide</button>
+
+
+
+
+<div class="row">
+    <div class="col-md-7">
+        <table border="1">
+            <tr>
+                <th>Sl no</th>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Id</th>
+                <th>Email</th>
+                <th>Avatar</th>
+
+            </tr>
+            <tr *ngFor="let data of msg; let i=index">
+                <td>{{i+1}}</td>
+                <td>{{data.first_name}}</td>
+                <td>{{data.last_name}}</td>
+                <td>{{data.id}}</td>
+                <td>{{data.email}}</td>
+                <td><img src="{{data.avatar}}"></td>
+            </tr>
+        </table>
+    </div>
+</div>

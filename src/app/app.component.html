@@ -1,0 +1,20 @@
+<div class="row">
+    <div class="col">
+        <div *ngIf="booleans">
+            <h1>Hide Me</h1>
+            </div>
+            <div *ngIf="!booleans">
+                <h1>Show Me</h1>
+                </div>
+    </div>
+    <div class="col">
+        <app-input-output (newMessage)=" newEvent($event)" [msg]="newarray"></app-input-output>
+    </div>
+  </div>
+
+
+
+
+
+
+<router-outlet></router-outlet>
